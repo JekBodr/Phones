@@ -3,7 +3,7 @@ import models.AppModel;
 import views.AppView;
 
 public class App {
-
+     //Вход в программу
     public static void main(String[] args) {
 
         AppModel model = new AppModel();
