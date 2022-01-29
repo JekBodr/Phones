@@ -6,7 +6,6 @@ import app.utils.AppStarter;
 import app.utils.Constants;
 import app.views.ContactAddView;
 
-
 public class ContactAddController {
 
     ContactAddModel model;

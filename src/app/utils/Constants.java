@@ -5,7 +5,7 @@ public class Constants {
 
     public final static String DB_DRIVER = "jdbc:sqlite:";
     // ВНИМАНИЕ ! DB_BASE_URL может отличаться от Вашего.
-    public final static String DB_BASE_URL = "F:\\Documents\\_HIL\\JE_211118\\JE_211118_apps\\Contacts\\database\\";
+    public final static String DB_BASE_URL = "D:\\Users\\dn010391beo\\IdeaProjects\\Phones\\src\\assets\\database";
     public final static String DB_NAME = "contactsdb.db";
     public final static String TABLE_NAME = "contacts";
     public final static String DB_ABSENT_MSG = "\n>> Базы нет!";
