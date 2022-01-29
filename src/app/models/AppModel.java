@@ -1,7 +1,13 @@
 package app.models;
 
+import app.controllers.ContactAddController;
+import app.controllers.ContactDeleteController;
 import app.controllers.ContactReadController;
+import app.controllers.ContactUpdateController;
+import app.views.ContactAddView;
 import app.views.ContactReadView;
+import app.views.ContactDeleteView;
+import app.views.ContactUpdateView;
 
 
 // TASK исправьте ошибки компиляции
@@ -18,10 +24,10 @@ public class AppModel {
     }
 
     public void createContact() {
-//        ContactAddModel model = new ContactAddModel();
-//        ContactAddView view = new ContactAddView(model);
-//        ContactAddController controller = new ContactAddController(model, view);
-//        controller.addContact();
+        ContactAddModel model = new ContactAddModel();
+        ContactAddView view = new ContactAddView(model);
+        ContactAddController controller = new ContactAddController(model, view);
+        controller.addContact();
     }
 
     public void readContacts() {
@@ -32,17 +38,17 @@ public class AppModel {
     }
 
     public void updateContact() {
-//        ContactUpdateModel model = new ContactUpdateModel();
-//        ContactUpdateView view = new ContactUpdateView(model);
-//        ContactUpdateController controller = new ContactUpdateController(model, view);
-//        controller.updateContact();
+        ContactUpdateModel model = new ContactUpdateModel();
+        ContactUpdateView view = new ContactUpdateView(model);
+        ContactUpdateController controller = new ContactUpdateController(model, view);
+        controller.updateContact();
     }
 
     public void deleteContact() {
-//        ContactDeleteModel model = new ContactDeleteModel();
-//        ContactDeleteView view = new ContactDeleteView(model);
-//        ContactDeleteController controller = new ContactDeleteController(model, view);
-//        controller.deleteContact();
+        ContactDeleteModel model = new ContactDeleteModel();
+        ContactDeleteView view = new ContactDeleteView(model);
+        ContactDeleteController controller = new ContactDeleteController(model, view);
+        controller.deleteContact();
     }
 }
 

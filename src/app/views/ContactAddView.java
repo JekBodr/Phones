@@ -3,9 +3,7 @@ package app.views;
 import app.database.entities.Contact;
 import app.models.ContactAddModel;
 import app.utils.Validator;
-
 import java.util.Scanner;
-
 
 public class ContactAddView {
 

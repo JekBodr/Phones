@@ -2,8 +2,6 @@ package app.views;
 
 import app.models.AppModel;
 import app.utils.Validator;
-
-
 import java.util.Scanner;
 
 public class AppView {

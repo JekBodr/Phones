@@ -4,10 +4,9 @@ import app.database.DBCheck;
 import app.database.DBConn;
 import app.database.entities.Contact;
 import app.utils.Constants;
-
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.HashMap;
+
 
 public class ContactAddModel {
 

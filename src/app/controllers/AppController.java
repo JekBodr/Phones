@@ -1,6 +1,5 @@
 package app.controllers;
 
-
 import app.models.AppModel;
 import app.utils.Constants;
 import app.views.AppView;

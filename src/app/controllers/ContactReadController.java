@@ -1,15 +1,12 @@
 package app.controllers;
 
-import app.models.AppModel;
+import app.database.entities.Contact;
 import app.models.ContactReadModel;
-import app.views.AppView;
+import app.utils.AppStarter;
+import app.utils.Constants;
 import app.views.ContactReadView;
+import java.util.List;
 
-
-import java.util.HashMap;
-import java.util.concurrent.atomic.AtomicInteger;
-
-// TASK исправьте ошибки компиляции
 public class ContactReadController {
 
     ContactReadModel model;
@@ -22,29 +19,61 @@ public class ContactReadController {
 
     public void getContacts() {
         String str = readContacts();
-        view.getOutput(str);
-        restartApp();
+        // Проверяем возврат чтения данных.
+        // Если БД отсутствует, выводим сообщение об этом
+        // и закрываем приложение.
+        // Иначе выводим сообщение и перезапускаем приложение.
+        if (str.equals(Constants.DB_ABSENT_MSG)) {
+            // Выводим уведомление.
+            view.getOutput(str);
+            // Закрываем приложение.
+            System.exit(0);
+        } else {
+            // Выводим уведомление или данные.
+            view.getOutput(str);
+            // Перезапускаем приложение.
+            AppStarter.startApp();
+        }
     }
 
-    public String readContacts() {
-        HashMap<String, String> map = model.readContacts();
-        AtomicInteger count = new AtomicInteger(0);
-        StringBuilder stringBuilder = new StringBuilder();
-        map.forEach((key, value) ->
-                stringBuilder.append(count.incrementAndGet())
-                        .append(") ")
-                        .append(key)
-                        .append(" ")
-                        .append(value)
-                        .append("\n")
-        );
-        return stringBuilder.toString();
-    }
+    private String readContacts() {
 
-    private void restartApp() {
-        AppModel appModel = new AppModel();
-        AppView appView = new AppView(appModel);
-         AppController controller = new AppController(appModel, appView);
-        controller.runApp();
+        // Получаем данные в коллекцию.
+        List<Contact> contacts = model.readContacts();
+
+        // Если коллекция не null, формируем вывод.
+        // Иначе уведомление об отсутствии БД.
+        if (contacts != null) {
+            // Если коллекция не пуста, формируем вывод.
+            // Иначе уведомление об отсутствии данных.
+            if (!contacts.isEmpty()) {
+                int count = 0;
+                String str;
+
+                // Применяем StringBuilder для формирования вывода.
+                // В Java объекты String неизменяемы.
+                // Это означает, что любая операция с объектом String
+                // не изменит содержимое объекта, а создаст новое с
+                // преобразованным значением.
+                // Конкатенация - дорогостоящая операция
+                // (с точки зрения производительности)
+                // из-за неизменности строки.
+                // Поэтому использовать StringBuilder.
+                StringBuilder stringBuilder = new StringBuilder();
+
+                for (Contact contact : contacts) {
+                    count++;
+                    str = count + ") ID: "
+                            + contact.getId() + " - "
+                            + " " + contact.getName()
+                            + " " + contact.getPhone()
+                            + "\n";
+                    stringBuilder.append(str);
+                }
+                return stringBuilder.toString();
+            } else
+                return Constants.DATA_ABSENT_MSG;
+        } else
+            return Constants.DB_ABSENT_MSG;
     }
 }
