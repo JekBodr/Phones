@@ -1,7 +1,8 @@
-package views;
+package app.views;
 
-import models.AppModel;
-import utils.Validator;
+import app.models.AppModel;
+import app.utils.Validator;
+
 
 import java.util.Scanner;
 
@@ -14,6 +15,8 @@ public class AppView {
     public AppView(AppModel model) {
         this.model = model;
     }
+
+
 
     public int doChoice() {
 

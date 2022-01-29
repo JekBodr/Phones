@@ -1,9 +1,10 @@
-package controllers;
+package app.controllers;
 
-import models.AppModel;
-import models.ContactReadModel;
-import views.AppView;
-import views.ContactReadView;
+import app.models.AppModel;
+import app.models.ContactReadModel;
+import app.views.AppView;
+import app.views.ContactReadView;
+
 
 import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -43,7 +44,7 @@ public class ContactReadController {
     private void restartApp() {
         AppModel appModel = new AppModel();
         AppView appView = new AppView(appModel);
-        AppController controller = new AppController(appModel, appView);
+         AppController controller = new AppController(appModel, appView);
         controller.runApp();
     }
 }

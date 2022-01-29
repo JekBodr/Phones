@@ -1,6 +1,7 @@
-package views;
+package app.views;
 
-import models.ContactCreateModel;
+import app.models.ContactCreateModel;
+
 
 public class ContactCreateView {
 

@@ -1,9 +1,10 @@
-package controllers;
+package app.controllers;
 
-import models.AppModel;
-import models.ContactCreateModel;
-import views.AppView;
-import views.ContactCreateView;
+import app.models.AppModel;
+import app.models.ContactCreateModel;
+import app.views.AppView;
+import app.views.ContactCreateView;
+
 
 public class ContactCreateController {
 

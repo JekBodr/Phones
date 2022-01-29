@@ -1,6 +1,6 @@
-package views;
+package app.views;
 
-import models.ContactReadModel;
+import app.models.ContactReadModel;
 
 public class ContactReadView {
 

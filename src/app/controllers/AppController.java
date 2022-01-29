@@ -1,8 +1,9 @@
-package controllers;
+package app.controllers;
 
-import models.AppModel;
-import utils.Constants;
-import views.AppView;
+
+import app.models.AppModel;
+import app.utils.Constants;
+import app.views.AppView;
 
 public class AppController {
 

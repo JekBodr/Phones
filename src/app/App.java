@@ -1,6 +1,10 @@
-import controllers.AppController;
-import models.AppModel;
-import views.AppView;
+package app;
+
+import app.controllers.AppController;
+import app.models.AppModel;
+import app.views.AppView;
+
+
 
 public class App {
      //Вход в программу

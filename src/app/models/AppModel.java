@@ -1,9 +1,10 @@
-package models;
+package app.models;
 
-import controllers.ContactCreateController;
-import controllers.ContactReadController;
-import views.ContactCreateView;
-import views.ContactReadView;
+import app.controllers.ContactCreateController;
+import app.controllers.ContactReadController;
+import app.views.ContactCreateView;
+import app.views.ContactReadView;
+
 
 // TASK исправьте ошибки компиляции
 public class AppModel {
