@@ -3,8 +3,6 @@ package app.views;
 import app.database.entities.Contact;
 import app.utils.Validator;
 import app.models.ContactUpdateModel;
-
-
 import java.util.Scanner;
 
 public class ContactUpdateView {

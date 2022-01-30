@@ -6,7 +6,6 @@ import app.database.DBConn;
 import app.database.entities.Contact;
 import app.utils.Constants;
 import app.utils.IdChecker;
-
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 

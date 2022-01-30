@@ -39,7 +39,7 @@ public class Validator {
 
     // Валидация ввода телефона
     public static String validatePhoneInput(Scanner scanner) {
-        String str = scanner.nextLine().trim();
+        String str = scanner.next().trim();
         while (str.isEmpty()) {
             System.out.print(Constants.PHONE_EMPTY_MSG);
             str = scanner.nextLine().trim();
