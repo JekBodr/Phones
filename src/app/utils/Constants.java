@@ -2,10 +2,9 @@ package app.utils;
 
 public class Constants {
 
-
     public final static String DB_DRIVER = "jdbc:sqlite:";
-    public final static String DB_BASE_URL = "D:\\Users\\dn010391beo\\IdeaProjects\\Phones\\src\\assets\\database";
-    public final static String DB_NAME = "contacts.db";
+    public final static String DB_BASE_URL = "D:\\Users\\dn010391beo\\IdeaProjects\\Phones\\src\\assets\\database\\";
+    public final static String DB_NAME = "contactsdb.db";
     public final static String TABLE_NAME = "contacts";
     public final static String DB_ABSENT_MSG = "\n>> Базы нет!";
     public final static String DATA_ABSENT_MSG = "\n>> Данные отсутствуют.";

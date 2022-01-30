@@ -9,8 +9,6 @@ import app.views.ContactReadView;
 import app.views.ContactDeleteView;
 import app.views.ContactUpdateView;
 
-
-// TASK исправьте ошибки компиляции
 public class AppModel {
 
     private int choice;

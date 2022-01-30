@@ -50,7 +50,7 @@ public class Validator {
     // Валидация ввода ID
     public static int validateIdInput(Scanner scanner) {
         while (!scanner.hasNextInt()) {
-            String str = scanner.nextLine().trim();
+            String str = scanner.next().trim();
             System.out.printf(Constants.NOT_A_NUMBER_MSG, str);
         }
         int id = scanner.nextInt();

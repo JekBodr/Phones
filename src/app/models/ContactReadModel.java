@@ -22,8 +22,8 @@ public class ContactReadModel {
         if (DBCheck.isDBExists()) {
             list = readData();
         } else {
-            list = null;
-        }
+           list = null;
+       }
         return list;
     }
 
